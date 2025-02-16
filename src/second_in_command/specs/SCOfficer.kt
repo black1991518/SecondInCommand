@@ -15,7 +15,7 @@ class SCOfficer(var person: PersonAPI, var aptitudeId: String) {
 
     var activeSkillIDs = mutableSetOf<String>()
 
-    var skillPoints = 1
+    var skillPoints = 3
     private var experiencePoints: Float = 0f
     private var level: Int = 1
 
@@ -109,7 +109,7 @@ class SCOfficer(var person: PersonAPI, var aptitudeId: String) {
     fun increaseLevel(amount: Int) {
         for (i in 0 until amount) {
             if (level >= getMaxLevel()) break
-            skillPoints += 1
+            skillPoints += 2
             level += 1
         }
         experiencePoints = 0f
@@ -128,7 +128,7 @@ class SCOfficer(var person: PersonAPI, var aptitudeId: String) {
         diff = diff.coerceAtLeast(0f)
 
         experiencePoints = diff
-        level += 1
+        level += 2
         skillPoints += 1
 
         levelUpIfNeeded()
