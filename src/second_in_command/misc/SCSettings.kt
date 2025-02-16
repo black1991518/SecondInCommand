@@ -10,7 +10,7 @@ class SCSettings : LunaSettingsListener {
 
     companion object {
 
-        var baseMaxLevel = 5
+        var baseMaxLevel = 8
 
         fun getMaxLevel() : Int  {
             var level = baseMaxLevel
